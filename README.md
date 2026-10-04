@@ -363,6 +363,22 @@ notebook 08.
 | 17 | `17_cholec80_m2cai_objective_ablation.ipynb` | Isolated 2×2 hub-target / update-objective ablation | Same-ontology remote S-STKG, motif checkpoint, hub | `Cholec80_M2CAI_RemoteAblation.csv` with paired surgical-case cluster-bootstrap intervals |
 | 18 | `18_cholec80_m2cai_decentralized_comparative_analysis.ipynb` | Comparison with decentralized reference methods on the same-ontology remote cohort | Source and remote caches, motif-run split and checkpoint, hub | Comparative performance, communication payload, and seed-sensitivity outputs |
 
+### Validation and robustness analyses
+
+| No. | Notebook | Purpose | Required input | Main output |
+|---:|---|---|---|---|
+| 19 | `19_source_sstkg_component_ablation.ipynb` | Fixed-checkpoint S-STKG component ablation covering node geometry, motion, functional-role semantics, progress, the virtual-context node, edge descriptors, and temporal sampling | Source S-STKG, retained phase-classifier checkpoint, saved split | Component-ablation results reported in Table 4 |
+| 20 | `20_motif_extractor_fixed_budget_sensitivity.ipynb` | Fixed-budget sensitivity analysis for checkpoint initialization, first GATv2-layer trainability, temporal window length, and stride | Source S-STKG, retained phase-classifier checkpoint, saved split | Motif-extractor sensitivity results reported in Table 5 |
+| 21 | `21_remote_update_objective_and_head_robustness.ipynb` | Remote hub-target and objective ablation, focal-versus-set-size-weighting decomposition, and multi-seed linear-versus-MLP robustness analysis | Same-ontology remote S-STKG, motif checkpoint, calibrated hub | Remote-update ablation and head-robustness results reported in Table 6 and Section 5.2 |
+| 22 | `22_visual_to_graph_perturbation_robustness.ipynb` | Controlled detector-miss, role-confusion, and combined visual-to-graph perturbation analysis | Same-ontology remote S-STKG, motif checkpoint, calibrated hub | Visual-to-graph robustness results reported in Table 7 |
+
+Notebook 19 is stored under `Codes/S-STKG_Construction/`, notebook 20 under
+`Codes/Motif_Extraction/`, notebook 21 under `Codes/Ablation_Objectives/`, and
+notebook 22 under `Codes/Remote_Update_Cholecystectomy/`. These notebooks provide
+targeted validation and robustness analyses and do not alter the retained training
+or consultation configuration.
+
+
 ---
 
 ## Recommended execution order
